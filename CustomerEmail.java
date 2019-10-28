@@ -14,25 +14,25 @@ public class CustomerEmail
    public CustomerEmail (String name, String id)
                         throws CustomerEmailException
    {
-      // Remove elading and trailing spaces, tabs.
+      // Remove before and after spaces, tabs.
       name = name.trim ();
       id   = id.trim ();
 
       if (name.length () == 0)
       {
-         //JOptionPane.showMessageDialog (null, "Error: name cannot be blank.");
+         //(null, "Error: name cannot be blank.");
          throw new CustomerEmailException ("Error: name cannot be blank.");
       }
 
       else if (id.length () == 0)
       {
-         //JOptionPane.showMessageDialog (null, "Error: Id cannot be blank.");
+         // (null, "Error: Id cannot be blank.")
          throw new CustomerEmailException ("Error: Id cannot be blank.");
       }
 
       else
       {
-         // All is OK, set class data to the values passed in.
+         // If everything is okay, set class data to the values passed in.
          this.name = name;
          this.id   = id;
       }
@@ -64,4 +64,4 @@ public class CustomerEmail
       return id + "\t" + name + "\t" + id + EMAIL_STUB;
    }
 
-} // public class StudentEmail
+} // public class CustomerEmail
